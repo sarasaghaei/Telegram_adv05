@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layot_contacts"
+    android:padding="5dp">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_userchat"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:src="#F44336"/>
+
+
+    <TextView
+        android:id="@+id/tv_namechat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name"
+        android:layout_toEndOf="@id/img_userchat"
+        style="@style/styletext"/>
+
+    <TextView
+        android:id="@+id/tv_lastseen"
+        style="@style/detail_recycle_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_namechat"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@id/img_userchat"
+        android:gravity="center_vertical"
+        android:text="@string/last_seen_recently" />
+
+</RelativeLayout>

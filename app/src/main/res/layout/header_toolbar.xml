@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:background="@color/colorPrimary">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            tools:ignore="UselessParent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_profile"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerInParent="true"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/user"
+                app:civ_border_width="1dp"
+                />
+            <TextView
+                android:id="@+id/tv_nameprofile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/styletext"
+                android:text="@string/saghaei"
+                android:layout_above="@+id/tv_tellprofile"
+                />
+            <TextView
+                android:id="@+id/tv_tellprofile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/textdetail"
+                android:text="@string/_98933"
+                android:layout_alignParentBottom="true"
+                />
+
+            <TextView
+                android:id="@+id/tv_moreprofile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/tv_nameprofile"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/ic_baseline_expand_more_24" />
+
+        </RelativeLayout>
+
+</RelativeLayout>

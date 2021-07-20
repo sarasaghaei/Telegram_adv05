@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<group>
+        <item android:id="@+id/NewGroup" android:title="@string/new_group" android:icon="@drawable/ic_group"/>
+        <item android:id="@+id/Contacts" android:title="@string/contacts" android:icon="@drawable/ic_contact"/>
+        <item android:id="@+id/Calls" android:title="@string/calls" android:icon="@drawable/ic_call"/>
+        <item android:id="@+id/PeopleNearby" android:title="@string/people_nearby" android:icon="@drawable/ic_nearby"/>
+        <item android:id="@+id/SaveMassages" android:title="@string/save_massages" android:icon="@drawable/ic_savemassage"/>
+        <item android:id="@+id/Setting" android:title="@string/setting" android:icon="@drawable/ic_settings"/>
+
+</group>
+<group android:checkableBehavior="single">
+        <item android:id="@+id/invate" android:title="@string/invate_ferinds" android:icon="@drawable/ic_add_user"/>
+        <item android:id="@+id/FAQ" android:title="@string/telegram_faq" android:icon="@drawable/ic_faq"/>
+</group>
+
+</menu>

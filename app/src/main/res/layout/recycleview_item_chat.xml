@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_recycleitemchat"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:orientation="horizontal">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_itemrecyc"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:src="@color/colorPrimary"
+        android:layout_alignParentStart="true"/>
+    <RelativeLayout
+        android:id="@+id/relativename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/img_itemrecyc">
+        <TextView
+            android:id="@+id/tv_name_recycitem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/name"
+            style="@style/text_recycle_item"/>
+        <TextView
+            android:id="@+id/tv_unreadmsg_recycitem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_tik_send"
+            android:layout_toStartOf="@id/tv_time_recycitem"
+            style="@style/detail_recycle_item"
+            tools:ignore="RelativeOverlap" />
+        <TextView
+            android:id="@+id/tv_time_recycitem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="@string/time"
+            style="@style/detail_recycle_item_time"/>
+        <TextView
+            android:id="@+id/tv_detail_recycitem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/detail"
+            android:lines="1"
+            android:layout_below="@id/tv_name_recycitem"
+            style="@style/detail_recycle_item"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

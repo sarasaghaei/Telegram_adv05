@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/baselayout">
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                android:id="@+id/include_toolbars"
+                layout="@layout/detailtoolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize" />
+
+            <ScrollView
+                android:id="@+id/scrollView_detailchat"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/include_toolbars"
+                android:background="@drawable/background">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyle_textchat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp" />
+
+            </ScrollView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_alignParentBottom="true"
+                android:background="@color/colorAccent"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/tv_stikermessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/ic_stiker" />
+
+                <EditText
+                    android:id="@+id/et_witemessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@id/tv_attach"
+                    android:layout_toEndOf="@id/tv_stikermessage"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="@string/message"
+                    android:inputType="textNoSuggestions|textMultiLine"
+                    android:autofillHints="@string/message" />
+
+                <TextView
+                    android:id="@+id/tv_attach"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="5dp"
+                    android:layout_toStartOf="@id/tv_mic"
+                    android:background="@drawable/ic_attach" />
+
+                <TextView
+                    android:id="@+id/tv_mic"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/ic_mic" />
+
+                <TextView
+                    android:id="@+id/tv_send"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/ic_send"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+        <FrameLayout
+            android:id="@+id/fragmentprofile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+        app:behavior_peekHeight="0dp"
+        app:behavior_hideable="true"
+        android:background="@color/colorAccent">
+        <include
+            android:id="@+id/include_medialayout"
+            layout="@layout/fragment_media"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
